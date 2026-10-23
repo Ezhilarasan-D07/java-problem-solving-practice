@@ -10,11 +10,12 @@ public class JavaIO2 {
         int number = input.nextInt();
         float decimal = input.nextFloat();
         String string = input.next();
+        input.nextLine();
+        input.close();
 
         System.err.println("String: " + string);
         System.err.println("Double: " + decimal);
         System.err.println("Integer: " + number);
-        
-        input.close();
+
     }
 }
