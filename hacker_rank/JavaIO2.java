@@ -9,8 +9,9 @@ public class JavaIO2 {
 
         int number = input.nextInt();
         float decimal = input.nextFloat();
-        String string = input.next();
         input.nextLine();
+        String string = input.nextLine();
+        
         input.close();
 
         System.err.println("String: " + string);
