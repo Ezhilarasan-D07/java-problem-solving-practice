@@ -1,5 +1,7 @@
 
 import java.util.Arrays;
+import java.util.Map;
+import java.util.HashMap;
 
 public class TwoSum {
 
@@ -13,6 +15,23 @@ public class TwoSum {
         return new int []{-1, -1};
 
     }
+
+    public static int[] findTwoSumHashMap (int arr [], int x) {
+        Map <Integer, Integer> map = new HashMap <> ();
+
+        for (int i = 0; i < arr.length; i++) {
+
+            int num = arr[i];
+            if (map.containsKey(x - num))
+                return new int [] {map.get(x - num), i};
+            
+            map.put(num, i);
+        }
+
+        return new int [] {};
+
+    }
+
     public static void main(String ... varChar) {
         int arr [] = { 3, 4, 5, 2, 1, 6, 7, 8};
         int x = 6;
